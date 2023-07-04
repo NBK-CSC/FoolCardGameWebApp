@@ -4,7 +4,6 @@
         <TargetFramework>net5.0</TargetFramework>
         <UserSecretsId>aspnet-FoolGameWebApp-ACD17B9F-0A8E-4F95-86F5-2220CF1FB176</UserSecretsId>
         <DockerDefaultTargetOS>Linux</DockerDefaultTargetOS>
-        <OutputType>Library</OutputType>
     </PropertyGroup>
 
     <ItemGroup>

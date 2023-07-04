@@ -1,14 +1,12 @@
 ﻿FROM mcr.microsoft.com/dotnet/aspnet:5.0 AS base
 WORKDIR /app
-EXPOSE 80
-EXPOSE 443
 
 FROM mcr.microsoft.com/dotnet/sdk:5.0 AS build
 WORKDIR /src
-COPY ["FoolGameWebApp.csproj", "FoolGameWebApp/"]
-RUN dotnet restore "FoolGameWebApp/FoolGameWebApp.csproj"
+COPY ["FoolGameWebApp.csproj", ""]
+RUN dotnet restore "./FoolGameWebApp.csproj"
 COPY . .
-WORKDIR "/src/FoolGameWebApp"
+WORKDIR "/src/."
 RUN dotnet build "FoolGameWebApp.csproj" -c Release -o /app/build
 
 FROM build AS publish
